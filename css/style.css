@@ -213,24 +213,27 @@ section h1 {
 	height: 100vh;
 }
 
-.large img {
+.largeCover {
 	position: fixed;
-	z-index: 2;
 	top: 50%;
 	left: 50%;
-	transform: translate(-60%, -65%);
-	width: 33%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 	margin: 2.5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.large img {
+	width: 35%;
 }
 
 .caption {
-	position: fixed;
-	z-index: 2;
+	margin: 0 auto;
 	font-size: 3rem;
-  color: #fff;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10%;
+	color: #fff;
 }
 
 .large .close-icon {
@@ -484,15 +487,16 @@ MEDIA QUERIES
 		font-size: 1.6rem;
 	}
 
-	.large img {
-		width: 70%;
-		transform: translate(-55%, -85%);
+	.cover {
+		width: 100px;
 	}
 
-	.caption {
-		left: 15%;
-		transform: none;
-		font-size: 2rem;
+	.cover {
+		margin: 5px;
+	}
+
+	.large img {
+		width: 70%;
 	}
 }
 
@@ -551,15 +555,12 @@ MEDIA QUERIES
 		font-size: 2.3rem;
 	}
 
-	.large img {
-		width: 70%;
-		transform: translate(-55%, -85%);
+	.cover {
+		width: 125px;
 	}
 
-	.caption {
-		left: 15%;
-		transform: none;
-		font-size: 2.5rem;
+	.large img {
+		width: 65%;
 	}
 }
 
@@ -613,16 +614,12 @@ MEDIA QUERIES
 		font-size: 3.5rem;
 	}
 
-	.large img {
-		width: 70%;
-		transform: translate(-55%, -65%);
+	.cover {
+		width: 125px;
 	}
 
-	.caption {
-		left: 15%;
-		bottom: 5%;
-		transform: none;
-		font-size: 2.5rem;
+	.large img {
+		width: 60%;
 	}
 
 }
@@ -670,16 +667,9 @@ MEDIA QUERIES
 	.menu-content a {
 		font-size: 3.2rem;
 	}
-
+	
 	.large img {
-		width: 70%;
-		transform: translate(-55%, -65%);
-	}
-
-	.caption {
-		left: 15%;
-		transform: none;
-		font-size: 2.5rem;
+		width: 55%;
 	}
 
 }
@@ -704,11 +694,7 @@ MEDIA QUERIES
 	}
 
 	.large img {
-		transform: translate(-55%, -75%);
-	}
-
-	.caption {
-		left: 55%;
+		width: 50%;
 	}
 }
 
@@ -727,11 +713,7 @@ MEDIA QUERIES
 	}
 
 	.large img {
-		transform: translate(-55%, -75%);
-	}
-
-	.caption {
-		left: 55%;
+		width: 45%;
 	}
 }
 
@@ -748,6 +730,10 @@ MEDIA QUERIES
 		justify-self: center;
 		align-items: center;
 	}
+
+	.large img {
+		width: 40%;
+	}
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
@@ -758,13 +744,5 @@ MEDIA QUERIES
 
 }
 
-/*
-@media (max-width: 1000px) {
-	#fun, #professional {
-		visibility: hidden;
-		opacity: 0;
-		transition: visibility 0s, opacity 1s linear;
-	}
-}
-*
+
 

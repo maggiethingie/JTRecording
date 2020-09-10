@@ -11,3 +11,22 @@
 
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: transparent;
+
+	 $(document).ready(function () {
+
+     //this will attach the class to every target 
+     $(document).on('click', function (event) {
+         $target = $(event.target);   
+            $target.addClass('widget-selected');
+        });
+
+    })
+
+
+@media (max-width: 1000px) {
+	#fun, #professional {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 1s linear;
+	}
+}

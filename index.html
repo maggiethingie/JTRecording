@@ -200,8 +200,10 @@
         largeElem.empty();
         largeElem.addClass('largeBackground');
         largeElem.append(`
-          <img src="img/art/${image}.jpg"/>
-          <p class="caption">${title}</p>
+          <div class="largeCover">
+            <img src="img/art/${image}.jpg"/>
+            <p class="caption">${title}</p>
+          </div>
           <ion-icon name="close-outline" class="close-icon" onClick="closeImage()"></ion-icon>
         `);
       }
