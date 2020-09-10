@@ -9,14 +9,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
 	font-family: 'Gaegu', cursive;
 }
 
 html,body
 {
-    width: 100vw;
-    height: 100vh;
+    /*width: 100vw;*/
+    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
@@ -145,7 +144,6 @@ CREDITS SECTION
 section {
 	height: 100vh;
 	/*width: 100vw;*/
-	margin-bottom: 3%;
 }
 
 section h1 {
@@ -256,10 +254,27 @@ section h1 {
 CONTACT SECTION
 ************************************************************/
 
+.footer {
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(255, 48, 194, 0.7);
+	display: block;
+	padding: 1%;
+}
+
+.footer p {
+	font-size: 2rem;
+}
+
+.section-wrapper {
+	min-height: 100vh;
+	display: block;
+	margin-bottom: 5%;
+}
 
 .section-contact {
-	min-height: 100vh;
 	margin-top: 5%;
+	display: block;
 }
 
 .section-header {
@@ -276,14 +291,12 @@ CONTACT SECTION
 	width: 10%;
 	max-height: 100%;
 	margin-top: 2%;
-	/*margin-top: 50px;*/
 }
 
 .professional {
 	transform: rotate(20deg);
 	width: 20%;
 	margin-top: 3%;
-	/*margin-top: 50px;*/
 }
 
 .fun, .professional {
@@ -361,20 +374,6 @@ button {
 }
 
 /************************************************************
-FOOTER
-************************************************************/
-
-footer {
-	width: 100vw;
-	bottom: 0%;
-	background-color: rgba(255, 48, 194, 0.7);
-}
-
-footer p {
-	font-size: 2rem;
-}
-
-/************************************************************
 MENU
 ************************************************************/
 .menu {
@@ -385,6 +384,8 @@ MENU
 	flex-direction: column;
 	width: 100%;
 }
+
+.menu-content { visibility: hidden; }
 
 .menu-icon, .menu .close-icon {
 	color: #fff;
