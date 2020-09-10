@@ -13,19 +13,21 @@
   <body>
     <section class="section-home" id="home"/>
       <header class="header">
-        <nav class="menu">
-          <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
-          <div class="menu-content">
-            <a href="#credits" class="credits-link">credits</a>
-            <a href="#contact" class="contact-link">contact</a>
-            <a href="https://www.facebook.com/JTRecording/">
-              <ion-icon name="logo-facebook" id="fb"></ion-icon>
-            </a>
-            <a href="https://www.instagram.com/jtrecordingoakland/">
-              <ion-icon name="logo-instagram" id="ig"></ion-icon>
-            </a>
-          </div>
-        </nav>
+          <nav class="menu">
+            <div class="icon">
+              <ion-icon onClick="openMenu()" name="menu-outline" class="menu-icon"></ion-icon>
+            </div>
+            <div class="menu-content">
+              <a href="#credits" class="credits-link">credits</a>
+              <a href="#contact" class="contact-link">contact</a>
+              <a href="https://www.facebook.com/JTRecording/">
+                <ion-icon name="logo-facebook" id="fb"></ion-icon>
+              </a>
+              <a href="https://www.instagram.com/jtrecordingoakland/">
+                <ion-icon name="logo-instagram" id="ig"></ion-icon>
+              </a>
+            </div>
+          </nav>
         <nav class="nav-bar">
           <a href="#credits" class="credits-link">credits</a>
           <a href="#contact" class="contact-link">contact</a>
@@ -189,21 +191,42 @@
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     <script>
       function enlargeImage(image, title) {
-        var largeElem = $('.large')
-        largeElem.empty()
+        var largeElem = $('.large');
+        largeElem.empty();
         largeElem.addClass('largeBackground');
         largeElem.append(`
           <img src="img/art/${image}.jpg"/>
           <p class="caption">${title}</p>
-          <ion-icon name="close-outline" class="close-outline" onClick="closeImage()"></ion-icon>
+          <ion-icon name="close-outline" class="close-icon" onClick="closeImage()"></ion-icon>
         `);
       }
 
       function closeImage() {
-        var largeElem = $('.large')
+        var largeElem = $('.large');
         largeElem.empty();
         largeElem.removeClass('largeBackground');
       }
+
+      function openMenu() {
+        var menu = $('.menu');
+        menu.toggleClass('black-background');
+        var menuContent = $('.menu-content');
+        menuContent.toggleClass('visible');
+        var icon = $('.icon');
+        icon.empty();
+        icon.append(`<ion-icon onClick="closeMenu()" name="close-outline" class="close-icon"></ion-icon>`);              
+      }
+
+      function closeMenu() {
+        var menu = $('.menu');
+        menu.toggleClass('black-background');
+        var menuContent = $('.menu-content');
+        menuContent.toggleClass('visible');
+        var icon = $('.icon');
+        icon.empty();
+        icon.append(`<ion-icon onClick="openMenu()" name="menu-outline" class="menu-icon"></ion-icon>`);
+      }
+
     </script>
   </body>
 </html>

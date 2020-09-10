@@ -110,15 +110,12 @@ HEADER SECTION
 	text-decoration: none;
 	font-size: 3.5rem;
 	transition: font-size 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
 }
 
 .nav-bar a:hover {
 	color: rgb(255, 48, 194);
-	font-size: 4rem;
-}
-
-.menu {
-	visibility: hidden;
+	/*font-size: 4rem;*/
 }
 
 .social-links {
@@ -133,11 +130,12 @@ HEADER SECTION
 	color: #fff;
 	font-size: 3.5rem;
 	transition: font-size 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
 }
 
 .social-links a:hover {
 	color: rgb(0, 255, 31);
-	font-size: 4rem;
+	/*font-size: 4rem;*/
 }
 
 /************************************************************
@@ -237,7 +235,7 @@ section h1 {
   bottom: 10%;
 }
 
-.close-outline {
+.large .close-icon {
 	position: fixed;
 	z-index: 2;
 	top: 1%;
@@ -250,7 +248,7 @@ section h1 {
 	transition: font-size 0.2s ease-in-out;
 }
 
-.close-outline:hover {
+.large .close-icon:hover {
 	font-size: 3.2rem;
 }
 
@@ -376,6 +374,55 @@ footer p {
 	font-size: 2rem;
 }
 
+/************************************************************
+MENU
+************************************************************/
+.menu {
+	visibility: hidden;
+	position: absolute;
+	top: 0%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.menu-icon, .menu .close-icon {
+	color: #fff;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+	margin-left: 2%;
+}
+
+.menu-content a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+.menu-content {
+	visibility: hidden;
+	margin-left: 5%;
+}
+
+.menu-icon:hover, .menu-icon:active, .menu .close-icon:hover, .menu .close-icon:active {
+	color: #bbb;		
+}
+
+.menu-content a:hover {
+	color: rgb(255, 48, 194);
+}
+
+.menu-content ion-icon:hover {
+	color: rgb(0, 255, 31);
+}
+
+.visible {
+	visibility: visible;
+}
+
+.black-background {
+	background-color: rgba(0, 0, 0, 0.7);
+}
 
 /************************************************************
 MEDIA QUERIES
@@ -389,8 +436,9 @@ MEDIA QUERIES
 	.header {
 		height: 100vh;
 		width: 100vw;
-		grid: 5% 15% 35% 5% 15% 15% 10% / 75% 20% 5%;
+		grid: 5% 15% 35% 5% 15% 15% 10% / 75% 25%;
 		justify-content: center;
+		position: relative;
 	}
 
 	.nav-bar, .social-links {
@@ -404,6 +452,7 @@ MEDIA QUERIES
 	#banner-2 {
 		display: block;
 		width: 90%;
+		margin: 0 auto;
 		grid-row: 3 / 4;
 		grid-column: 1 / 3;
 	}
@@ -424,41 +473,14 @@ MEDIA QUERIES
 
 	.menu {
 		visibility: visible;
-		grid-row: 2 / 3;
-		grid-column: 2 / 3;
-		align-self: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: flex-end;
-		width: 100%;
 	}
 
-	.menu-icon {
-		font-size: 4rem;
-		color: rgb(255, 48, 194);
-		cursor: pointer;
-	}
-
-	.menu-content {
-		/*display: none;*/
-		visibility: hidden;
-		/*background-color: rgba(0, 0, 0, 0.7);*/
-		z-index: 1;
-		width: 100%;
-	}
-
-	.menu:hover .menu-content, .menu:active .menu-content {
-		/*display: inline-block;*/
-		visibility: visible;
+	.menu-icon, .menu .close-icon {
+		font-size: 3rem;
 	}
 
 	.menu-content a {
-		font-size: 1.4rem;
-		color: #fff;
-		text-decoration: none;
-		display: block;
-		right: 1%;
+		font-size: 1.6rem;
 	}
 
 	.large img {
@@ -482,8 +504,9 @@ MEDIA QUERIES
 	.header {
 		height: 100vh;
 		width: 100vw;
-		grid: 5% 15% 35% 5% 15% 15% 10% / 75% 20% 5%;
+		grid: 5% 15% 35% 5% 15% 15% 10% / 75% 25%;
 		justify-content: center;
+		position: relative;
 	}
 
 	.nav-bar, .social-links {
@@ -517,41 +540,14 @@ MEDIA QUERIES
 
 	.menu {
 		visibility: visible;
-		grid-row: 2 / 3;
-		grid-column: 2 / 3;
-		align-self: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: flex-end;
-		width: 100%;
 	}
 
-	.menu-icon {
+	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
-		color: rgb(255, 48, 194);
-		cursor: pointer;
-	}
-
-	.menu-content {
-		/*display: none;*/
-		visibility: hidden;
-		/*background-color: rgba(0, 0, 0, 0.7);*/
-		z-index: 1;
-		width: 100%;
-	}
-
-	.menu:hover .menu-content, .menu:active .menu-content {
-		/*display: inline-block;*/
-		visibility: visible;
 	}
 
 	.menu-content a {
-		font-size: 1.8rem;
-		color: #fff;
-		text-decoration: none;
-		display: block;
-		right: 1%;
+		font-size: 2.3rem;
 	}
 
 	.large img {
@@ -570,8 +566,9 @@ MEDIA QUERIES
 	.header {
 		height: 100vh;
 		width: 100vw;
-		grid: 5% 25% 25% 5% 15% 15% 10% / 75% 20% 5%;
+		grid: 5% 25% 25% 5% 15% 15% 10% / 75% 25%;
 		justify-content: center;
+		position: relative;
 	}
 
 	.nav-bar, .social-links {
@@ -605,42 +602,14 @@ MEDIA QUERIES
 
 	.menu {
 		visibility: visible;
-		right: 5%;
-		top: 5%;
-		grid-row: 2 / 3;
-		grid-column: 2 / 3;
-		align-self: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: flex-end;
-		width: 100%;
 	}
 
-	.menu-icon {
+	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
-		color: rgb(255, 48, 194);
-		cursor: pointer;
-	}
-
-	.menu-content {
-		/*display: none;*/
-		visibility: hidden;
-		/*background-color: rgba(0, 0, 0, 0.7);*/
-		z-index: 1;
-		width: 100%;
-	}
-
-	.menu:hover .menu-content, .menu:active .menu-content {
-		/*display: inline-block;*/
-		visibility: visible;
 	}
 
 	.menu-content a {
-		font-size: 2.5rem;
-		color: #fff;
-		text-decoration: none;
-		display: block;
+		font-size: 3.5rem;
 	}
 
 	.large img {
@@ -661,8 +630,9 @@ MEDIA QUERIES
 	.header {
 		height: 100vh;
 		width: 100vw;
-		grid: 15% 15% 25% 5% 15% 15% 10% / 75% 20% 5%;
+		grid: 15% 15% 25% 5% 15% 15% 10% / 75% 25%;
 		justify-content: center;
+		position: relative;
 	}
 
 	.nav-bar, .social-links {
@@ -671,13 +641,13 @@ MEDIA QUERIES
 	#banner {
 		height: 50%;
 		grid-row: 3 / 4;
-		grid-column: 1 / 3;
+		grid-column: 1 / 4;
 	}
 
 	#p1 {
 		font-size: 2.8rem;
 		grid-row: 5 / 6;
-		grid-column: 1 / 3;
+		grid-column: 1 / 4;
 		overflow-wrap: break-word;
 		text-align: center;
 	}
@@ -685,49 +655,19 @@ MEDIA QUERIES
 	#p2 {
 		font-size: 2.8rem;
 		grid-row: 6 / 7;
-		grid-column: 1 / 3;
+		grid-column: 1 / 4;
 	}
 
 	.menu {
 		visibility: visible;
-		right: 5%;
-		top: 5%;
-		grid-row: 1 / 3;
-		grid-column: 2 / 3;
-		align-self: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: flex-end;
-		width: 100%;
 	}
 
-	.menu-icon {
+	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
-		color: rgb(255, 48, 194);
-		cursor: pointer;
-	}
-
-	.menu-content {
-		/*display: none;*/
-		visibility: hidden;
-		/*background-color: rgba(0, 0, 0, 0.7);*/
-		z-index: 1;
-		right: 1%;
-		width: 100%;
-	}
-
-	.menu:hover .menu-content, .menu:active .menu-content {
-		/*display: inline-block;*/
-		visibility: visible;
 	}
 
 	.menu-content a {
-		font-size: 3rem;
-		color: #fff;
-		text-decoration: none;
-		display: block;
-		right: 1%;
+		font-size: 3.2rem;
 	}
 
 	.large img {
