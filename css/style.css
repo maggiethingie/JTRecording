@@ -14,7 +14,6 @@
 
 html,body
 {
-    /*width: 100vw;*/
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -41,44 +40,42 @@ body {
 HEADER SECTION
 ************************************************************/
 .header {
-	height: 30vh;
-	width: 100vw;
+	height: 40%;
+	width: 100%;
 	display: grid;
-	grid: 75% 12.5% 12.5% / 25% 50% 25%;
-	align-items: center;
+	grid: 100% / 20% 60% 20%;
+	grid-gap: 10px;
+	align-items: start;
 	justify-items: center;
 	/*background-color: rgba(0, 0, 0, 0.8);*/
 	/*box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.4);*/
 	z-index: 1;
 }
 
-#banner {
-	height: 60%;
-	width: 90%;
-	/*animation: 1s ease-in-out 0s 1 onLoad;*/
-	grid-row: 1 / 2;
+.banner-heading {
 	grid-column: 2 / 3;
+	width: 80%;
+	margin: 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#banner {
+	width: 100%;
 }
 
 #banner-2 {
 	display: none;
 }
 
-#p1, #p2 {
+.banner-heading p {
+	margin: 1%;
 	font-size: 2.5rem;
 	color: #fff;
 	font-family: 'Gaegu', cursive;
-	align-self: start;
-}
-
-#p1 {
-	grid-row: 2 / 3;
-	grid-column: 1 / 4;
-}
-
-#p2 {
-	grid-row: 3 / 4;
-	grid-column: 1 / 4;
+	text-align: center;
 }
 
 @keyframes onLoad {
@@ -94,13 +91,13 @@ HEADER SECTION
 }
 
 .nav-bar {
-	grid-row: 1 / 2;
+	margin-left: 8%;
+	margin-top: 8%;
 	grid-column: 1 / 2;
 	justify-self: stretch;
 	font-family: 'Gaegu', cursive;
-	/*height: 60%;*/
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: flex-center;
 }
 
@@ -118,7 +115,8 @@ HEADER SECTION
 }
 
 .social-links {
-	grid-row: 1 / 2;
+	margin-right: 8%;
+	margin-top: 8%;
 	grid-column: 3 / 4;
 	justify-self: stretch;
 	display: flex;
@@ -143,14 +141,11 @@ CREDITS SECTION
 
 section {
 	height: 100vh;
-	/*width: 100vw;*/
 }
 
 section h1 {
 	color: #fff;
 	text-transform: uppercase;
-	/*-webkit-text-stroke-width: 0.5px;
-	-webkit-text-stroke-color: #fff;*/
 	font-weight: 300;
 	top: 20%;
 	margin: 0 auto;
@@ -257,18 +252,6 @@ section h1 {
 CONTACT SECTION
 ************************************************************/
 
-.footer {
-	width: 100%;
-	bottom: 0;
-	background-color: rgba(255, 48, 194, 0.7);
-	display: block;
-	padding: 1%;
-}
-
-.footer p {
-	font-size: 2rem;
-}
-
 .section-wrapper {
 	min-height: 100vh;
 	display: block;
@@ -309,6 +292,17 @@ CONTACT SECTION
 	align-self: flex-end;
 }
 
+.footer {
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(255, 48, 194, 0.7);
+	display: block;
+	padding: 1%;
+}
+
+.footer p {
+	font-size: 2rem;
+}
 
 /************************************************************
 CONTACT FORM
@@ -338,8 +332,6 @@ CONTACT FORM
 
 .flex-form label {
 	font-size: 3rem;
-	/*color: rgb(255, 48, 194);*/
-	/*color: rgb(40, 184, 175);*/
 	color: rgb(0, 255, 31);
 	letter-spacing: .09em;
 	flex: 1 0 120px;
@@ -362,8 +354,6 @@ CONTACT FORM
 button {
 	width: 100px;
 	height: 50px;
-	/*background-color: rgb(255, 48, 194);*/
-	/*background-color: rgb(40, 184, 175);*/
 	background-color: rgb(0, 255, 31);
 	color: #000;
 	letter-spacing: .09em;
@@ -377,7 +367,7 @@ button {
 }
 
 /************************************************************
-MENU
+DROPDOWN MENU
 ************************************************************/
 .menu {
 	visibility: hidden;
@@ -432,51 +422,8 @@ MENU
 MEDIA QUERIES
 ************************************************************/
 @media (max-width: 320px) {
-
-	.fun, .professional {
-		display: none;
-	}
-
-	.header {
-		height: 100vh;
-		width: 100vw;
-		grid: 5% 15% 35% 5% 15% 15% 10% / 75% 25%;
-		justify-content: center;
-		position: relative;
-	}
-
-	.nav-bar, .social-links {
-		display: none;
-	}
-
-	#banner {
-		display: none;
-	}
-
-	#banner-2 {
-		display: block;
-		width: 90%;
-		margin: 0 auto;
-		grid-row: 3 / 4;
-		grid-column: 1 / 3;
-	}
-
-	#p1 {
+	.banner-heading p {
 		font-size: 1.8rem;
-		grid-row: 4 / 5;
-		grid-column: 1 / 3;
-		overflow-wrap: break-word;
-		text-align: center;
-	}
-
-	#p2 {
-		font-size: 1.8rem;
-		grid-row: 6 / 7;
-		grid-column: 1 / 3;
-	}
-
-	.menu {
-		visibility: visible;
 	}
 
 	.menu-icon, .menu .close-icon {
@@ -500,51 +447,13 @@ MEDIA QUERIES
 	}
 }
 
-@media (min-width: 320px) and (max-width: 479px) {
-
+@media (max-width: 479px) {
 	.fun, .professional {
 		display: none;
 	}
 
-	.header {
-		height: 100vh;
-		width: 100vw;
-		grid: 5% 15% 35% 5% 15% 15% 10% / 75% 25%;
-		justify-content: center;
-		position: relative;
-	}
-
-	.nav-bar, .social-links {
-		display: none;
-	}
-
-	#banner {
-		display: none;
-	}
-
-	#banner-2 {
-		display: block;
-		width: 90%;
-		grid-row: 3 / 4;
-		grid-column: 1 / 3;
-	}
-
-	#p1 {
+	.banner-heading p {
 		font-size: 2rem;
-		grid-row: 5 / 6;
-		grid-column: 1 / 3;
-		overflow-wrap: break-word;
-		text-align: center;
-	}
-
-	#p2 {
-		font-size: 2rem;
-		grid-row: 6 / 7;
-		grid-column: 1 / 3;
-	}
-
-	.menu {
-		visibility: visible;
 	}
 
 	.menu-icon, .menu .close-icon {
@@ -564,46 +473,9 @@ MEDIA QUERIES
 	}
 }
 
-@media (min-width: 480px) and (max-width: 639px) { 
-	.header {
-		height: 100vh;
-		width: 100vw;
-		grid: 5% 25% 25% 5% 15% 15% 10% / 75% 25%;
-		justify-content: center;
-		position: relative;
-	}
-
-	.nav-bar, .social-links {
-		display: none;
-	}
-
-	#banner {
-		display: none;
-	}
-
-	#banner-2 {
-		display: block;
-		width: 90%;
-		grid-row: 3 / 4;
-		grid-column: 1 / 3;
-	}
-
-	#p1 {
+@media (max-width: 639px) { 
+	.banner-heading p {
 		font-size: 2.8rem;
-		grid-row: 5 / 6;
-		grid-column: 1 / 3;
-		overflow-wrap: break-word;
-		text-align: center;
-	}
-
-	#p2 {
-		font-size: 2.8rem;
-		grid-row: 6 / 7;
-		grid-column: 1 / 3;
-	}
-
-	.menu {
-		visibility: visible;
 	}
 
 	.menu-icon, .menu .close-icon {
@@ -624,36 +496,33 @@ MEDIA QUERIES
 
 }
 
-@media (min-width: 640px) and (max-width: 767px) {
+@media (max-width: 767px) {
 	.header {
 		height: 100vh;
 		width: 100vw;
-		grid: 15% 15% 25% 5% 15% 15% 10% / 75% 25%;
-		justify-content: center;
+		display: block;
 		position: relative;
 	}
 
-	.nav-bar, .social-links {
+	.nav-bar, .social-links, #banner {
 		display: none;
 	}
-	#banner {
-		height: 50%;
-		grid-row: 3 / 4;
-		grid-column: 1 / 4;
+
+	.banner-heading {
+		position: absolute;
+		width: 70%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
-	#p1 {
-		font-size: 2.8rem;
-		grid-row: 5 / 6;
-		grid-column: 1 / 4;
-		overflow-wrap: break-word;
-		text-align: center;
+	#banner-2 {
+		display: block;
+		width: 100%;
 	}
 
-	#p2 {
+	.banner-heading p {
 		font-size: 2.8rem;
-		grid-row: 6 / 7;
-		grid-column: 1 / 4;
 	}
 
 	.menu {
@@ -674,23 +543,12 @@ MEDIA QUERIES
 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-	.header {
-		grid: 65% 17.5% 17.5% / 22.5% 65% 12.5%;
-	}
+@media (min-width: 768px) {
 
 	.nav-bar, .social-links {
 		flex-direction: column;
 		justify-self: center;
 		align-items: center;
-	}
-	#banner {
-		width: 90%;
-		height: 40%;
-	}
-
-	#p1 {
-		grid-column: 1 / 4;
 	}
 
 	.large img {
@@ -698,33 +556,14 @@ MEDIA QUERIES
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1023px) {
-	.header {
-		grid: 65% 17.5% 17.5% / 15% 70% 15%;
-	}
-	.nav-bar, .social-links {
-		flex-direction: column;
-		justify-self: center;
-		align-items: center;
-	}
-	#banner {
-		width: 90%;
-		height: 60%;
-	}
-
+@media (min-width: 992px) {
 	.large img {
 		width: 45%;
 	}
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-	.header {
-		grid: 65% 17.5% 17.5% / 15% 70% 15%;
-	}
-	#banner {
-		width: 90%;
-		height: 65%;
-	}
+
 	.nav-bar {
 		flex-direction: column;
 		justify-self: center;
@@ -735,14 +574,5 @@ MEDIA QUERIES
 		width: 40%;
 	}
 }
-
-@media (min-width: 1200px) and (max-width: 1500px) {
-	#banner {
-		width: 90%;
-		height: 50%;
-	}
-
-}
-
 
 
