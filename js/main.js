@@ -38,3 +38,41 @@ $(document).keydown(function(e) {
     }
 });
 
+function enlargeImage(image, title) {
+  var largeElem = $('.large');
+  largeElem.empty();
+  largeElem.addClass('largeBackground');
+  largeElem.append(`
+    <div class="largeCover">
+      <img src="img/art/${image}.jpg"/>
+      <p class="caption">${title}</p>
+    </div>
+    <ion-icon name="close-outline" class="close-icon" onClick="closeImage()"></ion-icon>
+  `);
+}
+
+function closeImage() {
+  var largeElem = $('.large');
+  largeElem.empty();
+  largeElem.removeClass('largeBackground');
+}
+
+function openMenu() {
+  var menu = $('.menu');
+  menu.toggleClass('black-background');
+  var menuContent = $('.menu-content');
+  menuContent.toggleClass('visible');
+  var icon = $('.icon');
+  icon.empty();
+  icon.append(`<ion-icon onClick="closeMenu()" name="close-outline" class="close-icon"></ion-icon>`);              
+}
+
+function closeMenu() {
+  var menu = $('.menu');
+  menu.toggleClass('black-background');
+  var menuContent = $('.menu-content');
+  menuContent.toggleClass('visible');
+  var icon = $('.icon');
+  icon.empty();
+  icon.append(`<ion-icon onClick="openMenu()" name="menu-outline" class="menu-icon"></ion-icon>`);
+}
