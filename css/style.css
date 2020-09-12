@@ -15,8 +15,6 @@
 html,body
 {
     height: 100%;
-    margin: 0px;
-    padding: 0px;
     overflow-x: hidden; 
 }
 
@@ -91,7 +89,6 @@ HEADER SECTION
 }
 
 .nav-bar {
-	margin-left: 8%;
 	margin-top: 8%;
 	grid-column: 1 / 2;
 	justify-self: stretch;
@@ -102,6 +99,7 @@ HEADER SECTION
 }
 
 .nav-bar a:link, .nav-bar a:visited {
+	margin-left: 8%;
 	color: #fff;
 	text-decoration: none;
 	font-size: 3.5rem;
@@ -141,6 +139,7 @@ CREDITS SECTION
 
 section {
 	height: 100vh;
+	margin-bottom: 5%;
 }
 
 section h1 {
@@ -155,6 +154,7 @@ section h1 {
 
 .section-credits {
 	margin-left: 5%;
+	margin-top: 10%;
 }
 
 .scroll-container {
@@ -178,13 +178,6 @@ section h1 {
 .covers {
 	display: flex;
 	flex-wrap: wrap;
-
-}
-
-.covers p {
-	font-size: 3rem;
-	color: #fff;
-	align-self: flex-end;
 }
 
 .cover {
@@ -198,6 +191,13 @@ section h1 {
 	width: 100%;
 }
 
+.block {
+}
+
+.large {
+
+}
+
 .largeBackground {
 	position: fixed;
 	z-index: 1;
@@ -206,6 +206,9 @@ section h1 {
 	left: 0%;
 	width: 100vw;
 	height: 100vh;
+
+	display: block;
+	overflow: scroll;
 }
 
 .largeCover {
@@ -223,6 +226,7 @@ section h1 {
 
 .large img {
 	width: 35%;
+	max-height: 90%;
 }
 
 .caption {
@@ -233,9 +237,8 @@ section h1 {
 
 .large .close-icon {
 	position: fixed;
-	z-index: 2;
-	top: 1%;
-	right: 1%;
+	top: 2%;
+	right: 2%;
 	color: #fff;
 	font-size: 3rem;
 	cursor: pointer;
@@ -422,16 +425,12 @@ DROPDOWN MENU
 MEDIA QUERIES
 ************************************************************/
 @media (max-width: 320px) {
-	.banner-heading p {
-		font-size: 1.8rem;
+	.banner-heading p, .menu-content a, .caption {
+		font-size: 1.6rem;
 	}
 
 	.menu-icon, .menu .close-icon {
 		font-size: 3rem;
-	}
-
-	.menu-content a {
-		font-size: 1.6rem;
 	}
 
 	.cover {
@@ -447,21 +446,17 @@ MEDIA QUERIES
 	}
 }
 
-@media (max-width: 479px) {
+@media (min-width: 320px) and (max-width: 479px) {
 	.fun, .professional {
 		display: none;
 	}
 
-	.banner-heading p {
+	.banner-heading p, .menu-content a, .caption {
 		font-size: 2rem;
 	}
 
 	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
-	}
-
-	.menu-content a {
-		font-size: 2.3rem;
 	}
 
 	.cover {
@@ -473,17 +468,13 @@ MEDIA QUERIES
 	}
 }
 
-@media (max-width: 639px) { 
-	.banner-heading p {
+@media (min-width: 480px) and (max-width: 639px) { 
+	.banner-heading p, .menu-content a, .caption {
 		font-size: 2.8rem;
 	}
 
 	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
-	}
-
-	.menu-content a {
-		font-size: 3.5rem;
 	}
 
 	.cover {
@@ -496,9 +487,24 @@ MEDIA QUERIES
 
 }
 
+@media (min-width: 640px) and (max-width: 767px) {
+	.banner-heading p, .menu-content a, .caption {
+		font-size: 3rem;
+	}
+
+	.menu-icon, .menu .close-icon {
+		font-size: 5rem;
+	}
+	
+	.large img {
+		width: 55%;
+	}
+
+}
+
 @media (max-width: 767px) {
 	.header {
-		height: 100vh;
+		height: 90vh;
 		width: 100vw;
 		display: block;
 		position: relative;
@@ -506,6 +512,10 @@ MEDIA QUERIES
 
 	.nav-bar, .social-links, #banner {
 		display: none;
+	}
+
+	.menu {
+		visibility: visible;
 	}
 
 	.banner-heading {
@@ -520,30 +530,15 @@ MEDIA QUERIES
 		display: block;
 		width: 100%;
 	}
-
-	.banner-heading p {
-		font-size: 2.8rem;
-	}
-
-	.menu {
-		visibility: visible;
-	}
-
-	.menu-icon, .menu .close-icon {
-		font-size: 5rem;
-	}
-
-	.menu-content a {
-		font-size: 3.2rem;
-	}
-	
-	.large img {
-		width: 55%;
-	}
-
 }
 
 @media (min-width: 768px) {
+	#banner-2 {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
 
 	.nav-bar, .social-links {
 		flex-direction: column;
@@ -556,12 +551,6 @@ MEDIA QUERIES
 	}
 }
 
-@media (min-width: 992px) {
-	.large img {
-		width: 45%;
-	}
-}
-
 @media (min-width: 1024px) and (max-width: 1199px) {
 
 	.nav-bar {
@@ -571,8 +560,12 @@ MEDIA QUERIES
 	}
 
 	.large img {
-		width: 40%;
+		width: 45%;
 	}
 }
 
-
+@media (orientation: landscape) {
+	.large img {
+		width: 30%;
+	}
+}
