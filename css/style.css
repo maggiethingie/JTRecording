@@ -139,7 +139,6 @@ CREDITS SECTION
 ************************************************************/
 
 .section-credits {
-	margin-left: 5%;
 	margin-top: 10%;
 }
 
@@ -161,26 +160,29 @@ CREDITS SECTION
 	visibility: hidden;
 }
 
+.cover {
+	cursor: pointer;
+}
+
 .covers {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	height: 100vh;
+	grid: repeat(auto-fill, 150px) / repeat(auto-fill, 150px);
+	grid-gap: 15px;
+	justify-content: center;
+}
+
+.cover, .cover img {
+	max-height: 100%;
+	max-width: 100%;
 }
 
 .more {
 	color: #fff;
 	font-size: 2.5rem;
-	align-self: flex-end;
-}
+	align-self: end;
+	grid-column: span 2;
 
-.cover {
-	width: 150px;
-	margin: 10px;
-	position: relative;
-	cursor: pointer;
-}
-
-.cover img {
-	width: 100%;
 }
 
 .largeBackground {
@@ -401,6 +403,8 @@ DROPDOWN MENU (FOR SMALLER SCREENS)
 
 .black-background {
 	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 2;
+	height: 100vh;
 }
 
 /************************************************************
@@ -415,17 +419,19 @@ MEDIA QUERIES
 		font-size: 3rem;
 	}
 
-	.cover {
-		width: 100px;
-	}
-
-	.cover {
-		margin: 5px;
+	.covers {
+		grid: repeat(auto-fill, 100px) / repeat(auto-fill, 100px);
+		grid-gap: 10px;
 	}
 
 	.large img {
 		width: 70%;
 	}
+
+	.more {
+		font-size: 1rem;
+	}
+
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
@@ -441,13 +447,18 @@ MEDIA QUERIES
 		font-size: 5rem;
 	}
 
-	.cover {
-		width: 125px;
+	.covers {
+		grid: repeat(auto-fill, 125px) / repeat(auto-fill, 125px);
 	}
 
 	.large img {
 		width: 65%;
 	}
+
+	.more {
+		font-size: 1.3rem;
+	}
+
 }
 
 @media (min-width: 480px) and (max-width: 639px) { 
@@ -459,12 +470,16 @@ MEDIA QUERIES
 		font-size: 5rem;
 	}
 
-	.cover {
-		width: 125px;
+	.covers {
+		grid: repeat(auto-fill, 125px) / repeat(auto-fill, 125px);
 	}
 
 	.large img {
 		width: 60%;
+	}
+
+	.more {
+		font-size: 1.5rem;
 	}
 
 }
@@ -480,6 +495,10 @@ MEDIA QUERIES
 	
 	.large img {
 		width: 55%;
+	}
+
+	.more {
+		font-size: 1.8rem;
 	}
 
 }
@@ -512,6 +531,11 @@ MEDIA QUERIES
 		display: block;
 		width: 100%;
 	}
+
+	.more {
+		font-size: 2rem;
+	}
+
 }
 
 @media (min-width: 768px) {
@@ -551,3 +575,4 @@ MEDIA QUERIES
 		width: 30%;
 	}
 }
+
