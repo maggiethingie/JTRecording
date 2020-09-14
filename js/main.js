@@ -76,3 +76,17 @@ function closeMenu() {
   icon.empty();
   icon.append(`<ion-icon onClick="openMenu()" name="menu-outline" class="menu-icon"></ion-icon>`);
 }
+
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+    console.log(thissound);
+}
+
+/*
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+*/

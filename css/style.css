@@ -276,7 +276,13 @@ CONTACT SECTION
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 0s, opacity 1s linear;
+	transition: transform .2s ease-in-out;
 	align-self: flex-end;
+	cursor: pointer;
+}
+
+.fun:hover, .professional:hover {
+	transform: scale(1.2, 1.2);
 }
 
 .footer {
