@@ -78,10 +78,12 @@ function closeMenu() {
 }
 
 function playSound(soundObj) {
+/*
     var sound=document.getElementById(soundObj);
     sound.volume = 0.2;
     console.log(sound);
     sound.play();
+*/
 }
 
 /*
