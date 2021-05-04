@@ -79,9 +79,8 @@ function closeMenu() {
 
 function playSound(soundObj) {
     var sound=document.getElementById(soundObj);
-    sound.volume = 0.1;
-    console.log(sound);
-    sound.play();
+    sound.volume = 0.2;
+    //sound.play();
 }
 
 /*
