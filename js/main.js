@@ -64,7 +64,7 @@ function openMenu() {
   menuContent.toggleClass('visible');
   var icon = $('.icon');
   icon.empty();
-  icon.append(`<ion-icon onClick="closeMenu()" name="close-outline" class="close-icon"></ion-icon>`);              
+  icon.append(`<ion-icon onClick="closeMenu()" name="close-outline" class="close-icon"></ion-icon>`);
 }
 
 function closeMenu() {
@@ -79,7 +79,7 @@ function closeMenu() {
 
 function playSound(soundObj) {
     var sound=document.getElementById(soundObj);
-    sound.volume = 0.5;
+    sound.volume = 0.1;
     console.log(sound);
     sound.play();
 }
