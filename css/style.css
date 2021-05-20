@@ -15,7 +15,7 @@
 html,body
 {
     height: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 html {
@@ -24,9 +24,9 @@ html {
 
 body {
 	background-color: #000;
-	background-image: linear-gradient( 
-		rgba(0, 0, 0, 0.8), 
-		rgba(0, 0, 0, 0.8)), 
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0.8)),
 	url(../img/JT-image.png);
 	background-size: cover;
 	background-position: top 80px center;
@@ -132,7 +132,7 @@ HEADER SECTION
 }
 
 /************************************************************
-CREDITS SECTION 
+CREDITS SECTION
 ************************************************************/
 
 .section-credits {
@@ -164,7 +164,7 @@ CREDITS SECTION
 .covers {
 	display: grid;
 	height: 100vh;
-	grid: repeat(auto-fill, 150px) / repeat(auto-fill, 150px);
+	grid: repeat(auto-fill, 200px) / repeat(auto-fill, 200px);
 	grid-gap: 15px;
 	justify-content: center;
 }
@@ -389,7 +389,7 @@ DROPDOWN MENU (FOR SMALLER SCREENS)
 }
 
 .menu-icon:hover, .menu-icon:active, .menu .close-icon:hover, .menu .close-icon:active {
-	color: #bbb;		
+	color: #bbb;
 }
 
 .menu-content a:hover {
@@ -472,7 +472,7 @@ MEDIA QUERIES
 
 }
 
-@media (min-width: 480px) and (max-width: 639px) { 
+@media (min-width: 480px) and (max-width: 639px) {
 	.banner-heading p, .caption {
 		font-size: 2.8rem;
 	}
@@ -507,7 +507,7 @@ MEDIA QUERIES
 	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
 	}
-	
+
 	.large img {
 		width: 55%;
 	}
