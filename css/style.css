@@ -431,7 +431,7 @@ MEDIA QUERIES
 		font-size: 2.5rem;
 	}
 
-	.menu-icon, .menu .close-icon {
+	.menu-icon, .menu .close-icon, .email {
 		font-size: 3rem;
 	}
 
@@ -463,7 +463,7 @@ MEDIA QUERIES
 		font-size: 2.5rem;
 	}
 
-	.menu-icon, .menu .close-icon {
+	.menu-icon, .menu .close-icon, .email {
 		font-size: 5rem;
 	}
 
@@ -490,7 +490,7 @@ MEDIA QUERIES
 		font-size: 3rem;
 	}
 
-	.menu-icon, .menu .close-icon {
+	.menu-icon, .menu .close-icon, .email {
 		font-size: 5rem;
 	}
 
@@ -513,7 +513,7 @@ MEDIA QUERIES
 		font-size: 3rem;
 	}
 
-	.menu-icon, .menu .close-icon {
+	.menu-icon, .menu .close-icon, .email {
 		font-size: 5rem;
 	}
 
