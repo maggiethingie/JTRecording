@@ -298,11 +298,11 @@ CONTACT SECTION
 CONTACT FORM
 ************************************************************/
 .email {
-	font-size: 10rem;
+	font-size: 8rem;
 	color: #fff;
-	position: absolute;
-	top: 20%;
-	left: 20%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
 }
 
 .form {
