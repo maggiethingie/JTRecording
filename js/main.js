@@ -84,7 +84,7 @@ function playSound(soundObj) {
     } else {
 	sound.volume = 0.02;
     }
-    sound.play();
+    //sound.play();
 }
 
 /*
