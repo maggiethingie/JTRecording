@@ -427,11 +427,11 @@ MEDIA QUERIES
 		font-size: 1.6rem;
 	}
 
-	.menu-content a {
+	.menu-content a, .email {
 		font-size: 2.5rem;
 	}
 
-	.menu-icon, .menu .close-icon, .email {
+	.menu-icon, .menu .close-icon {
 		font-size: 3rem;
 	}
 
@@ -459,11 +459,11 @@ MEDIA QUERIES
 		font-size: 2rem;
 	}
 
-	.menu-content a {
+	.menu-content a, .email {
 		font-size: 2.5rem;
 	}
 
-	.menu-icon, .menu .close-icon, .email {
+	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
 	}
 
@@ -486,11 +486,11 @@ MEDIA QUERIES
 		font-size: 2.8rem;
 	}
 
-	.menu-content a {
+	.menu-content a, .email {
 		font-size: 3rem;
 	}
 
-	.menu-icon, .menu .close-icon, .email {
+	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
 	}
 
@@ -509,11 +509,11 @@ MEDIA QUERIES
 }
 
 @media (min-width: 640px) and (max-width: 767px) {
-	.banner-heading p, .menu-content a, .caption {
+	.banner-heading p, .menu-content a, .caption, .email {
 		font-size: 3rem;
 	}
 
-	.menu-icon, .menu .close-icon, .email {
+	.menu-icon, .menu .close-icon {
 		font-size: 5rem;
 	}
 
