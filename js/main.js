@@ -80,9 +80,9 @@ function closeMenu() {
 function playSound(soundObj) {
     var sound=document.getElementById(soundObj);
     if (soundObj == 'guitar') {
-	sound.volume = 0.05
+	sound.volume = 0.005
     } else {
-	sound.volume = 0.2;
+	sound.volume = 0.02;
     }
     sound.play();
 }
