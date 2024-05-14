@@ -79,7 +79,11 @@ function closeMenu() {
 
 function playSound(soundObj) {
     var sound=document.getElementById(soundObj);
-    sound.volume = 0.2;
+    if (soundObj == 'guitar') {
+	sound.volume = 0.1
+    } else {
+	sound.volume = 0.2;
+    }
     sound.play();
 }
 
