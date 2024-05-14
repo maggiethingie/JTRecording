@@ -45,7 +45,7 @@ section h1 {
 	top: 20%;
 	margin: 0 auto;
 	text-align: center;
-	font-size: 6rem;
+	font-size: 10rem;
 }
 
 /************************************************************
@@ -303,7 +303,7 @@ CONTACT FORM
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	justify-content: space-around;
 	max-width: 90%;
 }
 
